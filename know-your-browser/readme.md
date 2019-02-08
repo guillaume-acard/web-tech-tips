@@ -18,7 +18,7 @@ To easily visualize whats being rendered activate the __Paint Flashing__ feature
 ## Loading Testing
 Every application usually has some sort of data loading handling when fetching data to the server. Testing if the visual layout is correct can be difficult when in a local environement as there is no network latency. 
 
-Don't worry, DevTools got you covered, artificially slow down your network! This will simulated a slow 3G connection, showing you a more realistic user-experience. 
+Don't worry, _DevTools_ got you covered, artificially slow down your network! This will simulated a slow 3G connection, showing you a more realistic user-experience. 
 
 ![Slow Network](./slow-network.PNG)
 
