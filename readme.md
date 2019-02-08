@@ -71,20 +71,90 @@ Don't worry, _DevTools_ got you covered, artificially slow down your network! Th
 
 * `Ctrl-shift-P` Open the Command Menu
 
-# CSS 
+# CSS Tips
+
+Live edit the style of your elements and see what happens!
 
 # Your IDE setup
 
+The current most popular web development IDE [VSCode](https://code.visualstudio.com/) and is the clear winner in my opinion: Its functional, fast, highly customizable and in very active development. 
+
+Here are some tips on how to have a better IDE setup on VSCode:
+* Theme (very subjective): [Monokai](https://marketplace.visualstudio.com/items?itemName=DataByne.theme-monokai-hc)
+
+## Customize your Snippets 
+
+```json
+"Require" : {
+    "prefix": "rr",
+    "body": "const ${1:name}$2 = require('${1:name}');$0",
+    "description": "Require module"
+},
+"Require Local file" : {
+    "prefix": "rlf",
+    "body": "const ${1:name}$2 = require('./${1:name}');$0",
+    "description": "Require local file"
+},
+"Require Local file property" : {
+    "prefix": "rlfp",
+    "body": "const { $2 } = require('./$1');$0",
+    "description": "Require local file"
+},
+"Require - Lodash": {
+    "prefix": "r__",
+    "body": "const _ = require(\"lodash\");",
+    "description": "Require Lodash"
+},
+"Import - Lodash": {
+    "prefix": "__",
+    "body": "import _ from 'lodash';",
+    "description": "Import Lodash"
+},
+"Import MomentJS": {
+    "prefix": "rmm",
+    "body": "const moment = require(\"moment\");",
+    "description": "Import MomentJS"
+},
+"Import MomentJS ES6": {
+    "prefix": "mm",
+    "body": "import moment from 'moment';",
+    "description": "Import MomentJS"
+},
+"REST API - Request/Response method": {
+    "prefix": "rr",
+    "body": "(req, res) => {\n\t$0\n}",
+    "description": "Create default request/response api call method"
+},
+"Lambda function" : {
+    "prefix": "lll",
+    "body": "($1) => {\n\t$0\n}",
+    "description": "Base template for lambda function"
+},
+"Lambda function - one line" : {
+    "prefix": "ll",
+    "body": "($1) => $0",
+    "description": "Base template for lambda function"
+}
+```
+
 # Usefull Tools 
 
-* [PostMan](https://www.getpostman.com/)
+* [React Developer Tools](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi?hl=en) : Enhanced Debugging features of React Apps in Chrome's DevTools. 
+* [PostMan](https://www.getpostman.com/) : REST API client. Great to share and document web APIs.
 
 # Frameworks & Libraries
-
-## React Based Libs
+## JS Tool libs
+* [MomentJS](https://momentjs.com/) : Best library for handling dates in JS, can be a bit heavy out-of-the-box, so only use if you have complexe Data or formating requirements. 
+* [Lodash](https://lodash.com/) : Usefull helper functions library, fills the gap for many small missing functions in JS. 
+## React Based libs
 * React UI Components Libraries:
     * [Fabric (Office UI)](https://developer.microsoft.com/en-us/fabric)
     * [Ant design](https://ant.design/)
     * [Material Design (Google)](https://material-ui.com/)
 * Charting libs
     * [React-Vis](https://uber.github.io/react-vis/)
+
+## CSS libs
+* [animate.css](https://daneden.github.io/animate.css/) : Adds animations to your elements easily. A bit heavy (56k), so if performance is of concern try copy/pasting just the animations you need as you will likely only use a sub-set of them. 
+* [Font Awesome](https://fontawesome.com/icons?d=gallery) : Most commonly used svg/css Icon library. 
+* ~~[Bootstrap](https://getbootstrap.com/)~~ : A once very popular CSS layout/component framework. Its still good but I feel its over popularity has created a "Bootstrap fatigue" these days, weakening its once great apeal. 
