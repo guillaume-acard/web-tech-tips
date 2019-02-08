@@ -16,7 +16,7 @@ This one might sound like a obvious one but the main reason many people hate Jav
 So to become a good Web Developer, actually **learn and study** JavaScipt!
 Understand how the _this_ keyword work, understand what a _Prototype_ is and what really is a _function_ in JS.
 
-Here is a list of *.js* files that trys to cover some of the basics and traps of the syntax : [JavaScript - The Basics](/javascript-the-basics/index.md)
+Here is a list of *.js* files that trys to cover some of the basics and traps of the syntax : [JavaScript - The Basics](/javascript-the-basics/readme.md)
 
 # Know your Browser 
 
@@ -24,7 +24,7 @@ Where does all of this web stuff ends up living in? Your **Browsers**.
 
 Learn its power and tools, there is way more under the hood that first meets the eye. Right-click on any page and click on _Inspect_, this will give you access to the _DevTools_ view. Its a extremely powerful tool, it provides insights on everything going on in your page, allows to debug and live edit anything.
 
-Here is a list of nice features worth knowing about: [Know your Browser](/know-your-browser/index.md)
+Here is a list of nice features worth knowing about: [Know your Browser](/know-your-browser/readme.md)
 
 # Your IDE setup
 

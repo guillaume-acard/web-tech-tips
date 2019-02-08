@@ -20,7 +20,7 @@ Every application usually has some sort of data loading handling when fetching d
 
 Don't worry, DevTools got you covered, artificially slow down your network! This will simulated a slow 3G connection, showing you a more realistic user-experience. 
 
-![Slow Network](/know-your-browser/slow-network.PNG)
+![Slow Network](./slow-network.PNG)
 
 # Random
 
