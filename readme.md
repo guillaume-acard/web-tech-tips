@@ -1,22 +1,22 @@
 # Web Development Tips & Tricks
 
 This is a compilation of tips, tricks, tools and other things found over time that can help be a better at web developement.
-Web evolves fast, so some things might already outdated today! 
+Web evolves fast, so some things might already be outdated today!
 
 Enjoy!
 
 # Learn JavaScript
 
-This one might sound like a obvious one but the main reason many people hate JavaScript tends to be because many people don't actually do the effort of learning the language in depth.
+This one might sound obvious but my feeling of why many people hate JavaScript is because they don't actually do the effort of learning the language in depth.
 
 `Hey, I know Java and there is the word "Java" in "JavaScript", so it must be the same right?`
 
- This could not be more wrong and its naming has probably been one of the biggest source of confusion of the language. Its a mix of syntax pieces of C/Java + Schemme + Self, so yes, some syntax elements look the same but under the hood its a very different approach. 
+ This could not be more wrong and the name _JavaScript_ (who is a trademark of Oracle, reason why its official name is actually _ECMAScript_ or _ES_) was probably one of the biggest source of confusion around the language. Its a mix of syntax pieces of C/Java + Scheme + Self, so yes, some syntax elements look the same but under the hood its a very different approach. 
 
-So to become a good Web Developer, actually **learn and study** JavaScipt!
-Understand how the _this_ keyword work, understand what a _Prototype_ is and what really is a _function_ in JS.
+So to become a good Web Developer, you need to actually **learn and study** JavaScipt, hum... I mean ECMAScript!
+Understand how the _this_ keyword works, what a _Prototype_ is, what really is a _function_ and where are the many traps in the language is a must have.
 
-Here is a list of *.js* files that trys to cover some of the basics and traps of the syntax:
+Here is a list of *.js* files that aims to cover some of the basics and traps of the language:
 
 1. [Types](/javascript-the-basics/0%20-%20Types.js)
 1. [Variables](/javascript-the-basics/1%20-%20Variables.js)
@@ -37,24 +37,30 @@ Here is a list of *.js* files that trys to cover some of the basics and traps of
     1. [Export](/javascript-the-basics/11.1%20-%20Import-Export.js)
     1. [Import](/javascript-the-basics/11.2%20-%20Import-Export.js)
     1. [Export-ES6](/javascript-the-basics/11.3%20-%20Import-Export%20ES6.js)
-    1. [Import--ES6](/javascript-the-basics/11.4%20-%20Import-Export%20ES6.js)
+    1. [Import-ES6](/javascript-the-basics/11.4%20-%20Import-Export%20ES6.js)
 
 # Know your Browser 
 
-Where does all of this web stuff ends up living in? Your **Browsers**.
+Where does all of this web stuff ends up living in? Mostly in your **Browser**.
 
-Learn its power and tools, there is way more under the hood that first meets the eye. Right-click on any page and click on _Inspect_, this will give you access to the _DevTools_ view. Its a extremely powerful tool, it provides insights on everything going on in your page, allows to debug and live edit anything.
+So learning its powers and tools is important. There is more under the hood than first meets the eye. _Right-click_ on any page and click _Inspect_, this will give you access to the _DevTools_ view. A extremely powerful tool, it provides insights on everything going on in your page, allows to debug and live edit everything.
 
-I will be mainly focusing on the _Chrome_ DevTools here but the _FireFox_ one is as valid and has interesting features of its own to discover. 
+Focus here is mainly on the _Chrome_ DevTools but the _FireFox_ one is as a valid one and has interesting features of its own to discover. IE/Edge? Hum... up to you...
 
 ## Console 
 
-By pressing `Esc` in the _DevTools_ it will open the bottom panel and one of your first tools you should learn is the integrated Console. 
+By pressing `Esc` in the _DevTools_ it will open the bottom panel, providing one of the first tools you should learn:  the integrated Console. 
+
+Its a ES engine of its own. Want to quickly try and run some code snippet? Type/Paste it in the console and execute it. 
+
+Here are a few lesser known features of the console:
 
 * Get the value of thelast operation with `$_`
 * Reference the currently selected DOM element with `$0`
 
 ## UI Testing
+
+The _DevTools_ provide many handy features to help understand and test your interface. Here a few lesser known of those features:
 
 ### Paint Flashing
 To easily visualize whats being rendered activate the __Paint Flashing__ feature.
@@ -66,6 +72,11 @@ Every application usually has some sort of data loading handling when fetching d
 Don't worry, _DevTools_ got you covered, artificially slow down your network! This will simulated a slow 3G connection, showing you a more realistic user-experience. 
 
 ![Slow Network](/know-your-browser/slow-network.PNG)
+
+### Print Preview
+If you expect your page to be printed its important to check how its actually going to render. Use the handy _Print Emulation_ option for that.
+
+![Print Emulation](/know-your-browser/print-emulation.PNG)
 
 ## Random
 
@@ -84,7 +95,15 @@ Here are some tips on how to have a better IDE setup on VSCode:
 
 ## Customize your Snippets 
 
+Snippets are a great way to speed up your development! Use them and create your owns! 
+
+If you are doing _RectJS_ development you should install [ES7 React/Redux/GraphQL/React-Native snippets](https://marketplace.visualstudio.com/items?itemName=dsznajder.es7-react-js-snippets#overview)
+
+Here a few of the snippets I use: 
+
+### NodeJS
 ```json
+// Quick Require typing
 "Require" : {
     "prefix": "rr",
     "body": "const ${1:name}$2 = require('${1:name}');$0",
@@ -100,31 +119,18 @@ Here are some tips on how to have a better IDE setup on VSCode:
     "body": "const { $2 } = require('./$1');$0",
     "description": "Require local file"
 },
-"Require - Lodash": {
-    "prefix": "r__",
-    "body": "const _ = require(\"lodash\");",
-    "description": "Require Lodash"
-},
-"Import - Lodash": {
-    "prefix": "__",
-    "body": "import _ from 'lodash';",
-    "description": "Import Lodash"
-},
+// Common libs
 "Import MomentJS": {
-    "prefix": "rmm",
+    "prefix": "mm",
     "body": "const moment = require(\"moment\");",
     "description": "Import MomentJS"
 },
-"Import MomentJS ES6": {
-    "prefix": "mm",
-    "body": "import moment from 'moment';",
-    "description": "Import MomentJS"
+"Import Lodash": {
+    "prefix": "__",
+    "body": "const _ = require(\"lodash\");",
+    "description": "Import Lodash"
 },
-"REST API - Request/Response method": {
-    "prefix": "rr",
-    "body": "(req, res) => {\n\t$0\n}",
-    "description": "Create default request/response api call method"
-},
+// Common syntax helpers
 "Lambda function" : {
     "prefix": "lll",
     "body": "($1) => {\n\t$0\n}",
@@ -135,17 +141,40 @@ Here are some tips on how to have a better IDE setup on VSCode:
     "body": "($1) => $0",
     "description": "Base template for lambda function"
 }
+"REST API - Request/Response method": {
+    "prefix": "rr",
+    "body": "(req, res) => {\n\t$0\n}",
+    "description": "Create default request/response api call method"
+},
 ```
 
+### ReactJS
+```json
+"Import Linked CSS": {
+    "prefix": "css",
+    "body": "import \"./$TM_FILENAME_BASE.css\""
+}
+```
 # Usefull Tools 
 
-* [React Developer Tools](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi?hl=en) : Enhanced Debugging features of React Apps in Chrome's DevTools. 
-* [PostMan](https://www.getpostman.com/) : REST API client. Great to share and document web APIs.
+* [React Developer Tools](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi?hl=en) : Enhanced Debugging features of React Apps in Chrome's DevTools. A must have for React development. 
+* [PostMan](https://www.getpostman.com/) : REST API client. Great to share and document your web APIs.
 
 # Frameworks & Libraries
+There are __PLENTY__ of _npm_ libraries out there, so its hard to keep up and know what to use. Just type anything + `npm` in _Google_ and see what happens, its likely you wil find several matching libraries. So how to choose? A good way when comparing several libs is using [www.npmtrends.com](https://www.npmtrends.com/). Add the names of a couple of libraries and see whats trending. 
+
+Another good place to look at is: [bestofjs.org](https://bestofjs.org/), its a currated list of the most popular projects. 
+
+If you want to lookback on the past year to see whats trending, this site is also a great place: [2018.stateofjs.com](https://2018.stateofjs.com/introduction/)
+
+Here are a couple of selected commonly used libraries you should know about: 
+
 ## JS Tool libs
-* [MomentJS](https://momentjs.com/) : Best library for handling dates in JS, can be a bit heavy out-of-the-box, so only use if you have complexe Data or formating requirements. 
+* [MomentJS](https://momentjs.com/) : Best library for handling dates in JS, can be a bit heavy out-of-the-box, so only use if you have complex Dates or formatting requirements. 
 * [Lodash](https://lodash.com/) : Usefull helper functions library, fills the gap for many small missing functions in JS. 
+    * ~~[Underscore](https://underscorejs.org/)~~ : This library used to be the favored one as a utility lib (and is still very used) but nowdays _Lodash_ has become the default as more "modern" (Lodash was inspired by Underscore). See [lodash-vs-underscore](https://www.npmtrends.com/lodash-vs-underscore)
+* [Winstom](https://github.com/winstonjs/winston) : A simple Logging library (for NodeJS) 
+
 ## React Based libs
 * React UI Components Libraries:
     * [Fabric (Office UI)](https://developer.microsoft.com/en-us/fabric)
@@ -158,3 +187,9 @@ Here are some tips on how to have a better IDE setup on VSCode:
 * [animate.css](https://daneden.github.io/animate.css/) : Adds animations to your elements easily. A bit heavy (56k), so if performance is of concern try copy/pasting just the animations you need as you will likely only use a sub-set of them. 
 * [Font Awesome](https://fontawesome.com/icons?d=gallery) : Most commonly used svg/css Icon library. 
 * ~~[Bootstrap](https://getbootstrap.com/)~~ : A once very popular CSS layout/component framework. Its still good but I feel its over popularity has created a "Bootstrap fatigue" these days, weakening its once great apeal. 
+
+## Front-End Frameworks
+
+So the common question is: _React_, _Angular_ or _Vue_? Well the awnser for to this one is simple: __React__!!!
+
+Why? Its of course a question of taste but if you want to leverage the most a large community, bet on _React_. A simple way to look at it is: [React vs Angular vs Vue](https://www.npmtrends.com/react-vs-@angular/core-vs-vue), still not conviced? Check: [2018.stateofjs.com/front-end-frameworks](https://2018.stateofjs.com/front-end-frameworks/overview/), _Angular_ has a large portion of `Used it, would not use it again` and thats not a good sign...
