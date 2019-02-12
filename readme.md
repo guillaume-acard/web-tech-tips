@@ -55,7 +55,7 @@ Its a ES engine of its own. Want to quickly try and run some code snippet? Type/
 
 Here are a few lesser known features of the console:
 
-* Get the value of thelast operation with `$_`
+* Get the value of the last operation with `$_`
 * Reference the currently selected DOM element with `$0`
 
 ## UI Testing
@@ -80,6 +80,7 @@ If you expect your page to be printed its important to check how its actually go
 
 ## Random
 
+A few power user commands you shoudl know: 
 * `Ctrl-shift-P` Open the Command Menu
 
 # CSS Tips
@@ -88,9 +89,9 @@ Live edit the style of your elements and see what happens!
 
 # Your IDE setup
 
-The current most popular web development IDE [VSCode](https://code.visualstudio.com/) and is the clear winner in my opinion: Its functional, fast, highly customizable and in very active development. 
+The current most popular web development IDE [VSCode](https://code.visualstudio.com/) and its the clear winner in my opinion: Its functional, fast, highly customizable and in very active development. Previous to _VSCode_ you had [Sublime Text](https://www.sublimetext.com/) (A brilliantly done light-weight text editor originally written by just one guy!) and then [Atom.io](https://atom.io/), but both are loosing the IDE battle in favor of _VSCode_. There is of course also [WebStorm](https://www.jetbrains.com/webstorm/) but its a much more heavy IDE and requries a licence making it a less popular choice. 
 
-Here are some tips on how to have a better IDE setup on VSCode:
+Here are some subjective tips on how to have a better _VSCode_ setup:
 * Theme (very subjective): [Monokai](https://marketplace.visualstudio.com/items?itemName=DataByne.theme-monokai-hc)
 
 ## Customize your Snippets 
@@ -110,12 +111,12 @@ Here a few of the snippets I use:
     "description": "Require module"
 },
 "Require Local file" : {
-    "prefix": "rlf",
+    "prefix": "rrf",
     "body": "const ${1:name}$2 = require('./${1:name}');$0",
     "description": "Require local file"
 },
 "Require Local file property" : {
-    "prefix": "rlfp",
+    "prefix": "rrfp",
     "body": "const { $2 } = require('./$1');$0",
     "description": "Require local file"
 },
@@ -131,16 +132,16 @@ Here a few of the snippets I use:
     "description": "Import Lodash"
 },
 // Common syntax helpers
+"Lambda function - one line" : {
+    "prefix": "ll",
+    "body": "($1) => $0",
+    "description": "Base template for lambda function"
+},
 "Lambda function" : {
     "prefix": "lll",
     "body": "($1) => {\n\t$0\n}",
     "description": "Base template for lambda function"
 },
-"Lambda function - one line" : {
-    "prefix": "ll",
-    "body": "($1) => $0",
-    "description": "Base template for lambda function"
-}
 "REST API - Request/Response method": {
     "prefix": "rr",
     "body": "(req, res) => {\n\t$0\n}",
@@ -188,8 +189,15 @@ Here are a couple of selected commonly used libraries you should know about:
 * [Font Awesome](https://fontawesome.com/icons?d=gallery) : Most commonly used svg/css Icon library. 
 * ~~[Bootstrap](https://getbootstrap.com/)~~ : A once very popular CSS layout/component framework. Its still good but I feel its over popularity has created a "Bootstrap fatigue" these days, weakening its once great apeal. 
 
+## Advanced JS
+* [html2canvas](https://html2canvas.hertzen.com/) : Allows to perform screenshots of any html element (eg: for making site previews)
+* [popmotion.io](https://popmotion.io/) : Great library if you want to do advanced animations on your website.
+* [Howler.js](https://github.com/goldfire/howler.js#documentation) : Good when you want to do some fancy Audio tricks.
+
 ## Front-End Frameworks
 
 So the common question is: _React_, _Angular_ or _Vue_? Well the awnser for to this one is simple: __React__!!!
 
 Why? Its of course a question of taste but if you want to leverage the most a large community, bet on _React_. A simple way to look at it is: [React vs Angular vs Vue](https://www.npmtrends.com/react-vs-@angular/core-vs-vue), still not conviced? Check: [2018.stateofjs.com/front-end-frameworks](https://2018.stateofjs.com/front-end-frameworks/overview/), _Angular_ has a large portion of `Used it, would not use it again` and thats not a good sign...
+
+To create a new _React App_, nothing better than the [Create-React-App](https://github.com/facebook/create-react-app) tool. Doing all the plumbing required to build your app with npm, webpack, babel, grunt, gulp, hot-reload, etc... was a real pain and this was part of the reason of the _"JS fatigue"_ that existed during the years from to 2015-2017.
