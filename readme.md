@@ -1,7 +1,7 @@
 # Web Development Tips & Tricks
 
-This is a compilation of tips, tricks, tools and other things found over time that can help be a better at web developement.
-Web evolves fast, so some things might already be outdated today!
+This is a compilation (in no specific order), of tips, tricks, tools and other things found over time that can help be better at web developement.
+Web evolves fast, too fast maybe... so some things might already be outdated by the time you read it! Feel free to add your own to the list!
 
 Enjoy!
 
@@ -73,6 +73,17 @@ Don't worry, _DevTools_ got you covered, artificially slow down your network! Th
 
 ![Slow Network](/know-your-browser/slow-network.PNG)
 
+### First Render and execution time
+Remember that your users need to download many things before anything can happen in the browser. Its important to know how long a user will wait to start seeing and interact with your website. Many sites talk about the topic, in average your site should up and running under 2s. (more on this in the [Web development tips](#web-developement-tips) section).
+
+So to check this in your website check the _Network_ tab in the _Devtools_:
+
+![Network view](/know-your-browser/loading-time.PNG)
+
+1. The time it take to load the DOM (your raw _index.html_ before any JS magic is applied)
+1. The time it take for your JS to be downloaded and loaded, usually when the user starts to see your JS app as expected
+1. When your server API requests are finished and your site is fully loaded.
+
 ### Print Preview
 If you expect your page to be printed its important to check how its actually going to render. Use the handy _Print Emulation_ option for that.
 
@@ -122,12 +133,12 @@ Here a few of the snippets I use:
     "description": "Require local file"
 },
 // Common libs
-"Import MomentJS": {
+"Import MomentJS": { 
     "prefix": "mm",
     "body": "const moment = require(\"moment\");",
     "description": "Import MomentJS"
 },
-"Import Lodash": {
+"Import Lodash": { // Only to use in NodeJS env, as this imports the entire lib
     "prefix": "__",
     "body": "const _ = require(\"lodash\");",
     "description": "Import Lodash"
@@ -191,6 +202,7 @@ Here are a couple of selected commonly used libraries you should know about:
 * [html2canvas](https://html2canvas.hertzen.com/) : Allows to perform screenshots of any html element (eg: for making site previews)
 * [popmotion.io](https://popmotion.io/) : Great library if you want to do advanced animations on your website.
 * [Howler.js](https://github.com/goldfire/howler.js#documentation) : Good when you want to do some fancy Audio tricks.
+* [D3.js](https://d3js.org/) : A advanced SVG rendering engine. hard to use but very powerful. Many of theother charting library actually use d3.js underneath. So good to know it exists. 
 
 ## Front-End Frameworks
 
@@ -209,3 +221,56 @@ To create a new _React App_, nothing better than the [Create-React-App](https://
     * [React-Vis](https://uber.github.io/react-vis/)
 * Special Components:
     * [Draft.js](https://draftjs.org/) : Powerful WYSISWYG and Rich-text editror component. 
+
+# Web-developement tips
+
+## Size does matter - smaller is better
+
+Keep in mind how much data will be needed for you app to work. Not everyone will have a quick 4G network, some might on a slow VPN network. So try to always keep in an eye on the size of the package your sending to the Browser
+
+### Analyzing your app bundle
+
+There are plenty of tool to help you analyze your final app bundle, I use this one because of its simpicity: [source-map-explorer](https://github.com/danvk/source-map-explorer#readme)
+
+Its good practice to regularly check whats being bundled in your app using this tool (or any other). 
+* Simply run `source-map-explorer bundle.min.js bundle.min.js.map` on your build app files and get a better sense of whats packed inside. 
+
+### Know your libraries
+
+Some libraries need to be used in special manners in order to ensure a minimal package size. Eg, for _Lodash_ you need to use:
+```javascript
+import groupBy from 'lodash/groupBy'
+``` 
+instead of:
+```javascript
+import { groupBy } from 'lodash'
+```
+if you want to avoid sending the entire _Lodash_ library.
+
+Same goes for `office-react`, use:
+```javascript
+import { TextField } from 'office-ui-fabric-react/lib/TextField';
+```
+instead of:
+```javascript
+import { TextField } from 'office-ui-fabric-react`;
+```
+Yes, it will create heavier import statements and are more clunky to manage. Its the price to pay for a more optimized build. 
+
+Bundling unused code is the reason why libraries like [prop-types](https://www.npmjs.com/package/prop-types) have moved out of _ReactJS_ over time, as the code was only used during the dev phase but still packaged in your final build. 
+
+## While loading...
+
+Remember that a ReactJs app is full rendered by your JS/JSX code, meaning until its fully downloaded, nothinn is going to be displayed on screen. So remember to add on your base _index.html_ file a native css loader somewhere.
+
+So instead of your standard React "root div": 
+```html
+<div id="root" />
+```
+Add something like: 
+```html
+<div id="root">
+    <div class="loader">Loading...</div>
+</div>
+```
+Then add some cool css over it :) For example: [this](/css-tips/loader.css)
