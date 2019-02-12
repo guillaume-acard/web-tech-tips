@@ -1,17 +1,29 @@
 <html>
     <head>
         <style>
+            :root{
+                --bg-color: lightgray;
+            }
             #view h2{
                 color: red;
             }
             .title{
                 color: blue;
             }
+            .view{
+                background: var(--bg-color);
+                height: 100px;
+                position: relative;
+            }
+            .bottom-menu{
+                position: absolute;
+                bottom: 40px;
+            }
         </style>
     </head>
     <body>
-        <div id="view">
-            <h2 class="title">Css Tips</h2>
+        <div class="view">
+            <div class="bottom-menu">Bottom menu</div>
         </div>
     </body>
 </html>

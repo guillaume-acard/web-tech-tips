@@ -97,7 +97,47 @@ A few power user commands you should know:
 
 # CSS Tips
 
-Live edit the style of your elements and see what happens!
+Css is easy and hard at the same time... its not always easy to known what does what and how its going to look. So the easiest to create your css is live edit the style of your elements and see what happens!
+
+![live Css edit](/know-your-browser/live-css-edit.PNG)
+
+Try adding display and cycling through the different values, best way to visually learn what they do :)
+
+## Some basics to know
+
+Understand how the `position` property works. Its value will also-define how its sub-elements will calculate their position. 
+
+If we have the following HTML / CSS:
+```html
+<style>
+    .view{ height: 200px; }
+    .bottom-menu{
+        position: absolute;
+        bottom: 40px;
+    }
+</style>
+<div class="view">
+    <div class="bottom-menu">Bottom menu</div>
+</div>
+```
+
+_Bottom menu_ will be displayed at the bottom of the browser page. To have it relative to the parent element, simply add `position: relative` to `.view` css class, now its going to be placed _40px_ away from the bottom of your `view` div. I mention this case as its a common pitfall when trying to propely place elements in the page. Understanding that the parent element influence how properties of the sub-elements are calculated is important. 
+
+## Advanced CSS
+
+Many alternatives to CSS have been created, the most popular being [less](http://lesscss.org/) & [sass](https://sass-lang.com/), they provide many great features but add another layer of [transpilation](https://en.wikipedia.org/wiki/Source-to-source_compiler) (now, not only your JS is converted but also your CSS!).
+
+Unless you need this extra power, knowing what css already provide is probably a better start. One of the main argument for _less/sass_ is its capability to have variables but it now exists natively in _css_!
+
+See [Using CSS variables](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_variables) for more details. For those who dont want to bother with all the details, TL;DR; :
+```css
+:root{
+    ---bg-color: red;
+}
+.page{
+    background: val(--bg-color);
+}
+```
 
 # Your IDE setup
 
@@ -192,7 +232,10 @@ Here are a couple of selected commonly used libraries you should know about:
 * [MomentJS](https://momentjs.com/) : Best library for handling dates in JS, can be a bit heavy out-of-the-box, so only use if you have complex Dates or formatting requirements. 
 * [Lodash](https://lodash.com/) : Usefull helper functions library, fills the gap for many small missing functions in JS. 
     * ~~[Underscore](https://underscorejs.org/)~~ : This library used to be the favored one as a utility lib (and is still very used) but nowdays _Lodash_ has become the default as more "modern" (Lodash was inspired by Underscore). See [lodash-vs-underscore](https://www.npmtrends.com/lodash-vs-underscore)
-* [Winstom](https://github.com/winstonjs/winston) : A simple Logging library (for NodeJS) 
+* [Winston](https://github.com/winstonjs/winston) : A simple Logging library (for NodeJS) 
+* [axios](https://github.com/axios/axios) : A promised based HTTP client for the Browser and NodeJS. Its easy to use but has one little problem... its support for _proxy_ so might want to use the fix:
+    * see [/axios/axios/issues/925](https://github.com/axios/axios/issues/925)
+    * Working for proxy: [axios-https-proxy-fix](https://www.npmjs.com/package/axios-https-proxy-fix)
 ## CSS libs
 * [animate.css](https://daneden.github.io/animate.css/) : Adds animations to your elements easily. A bit heavy (56k), so if performance is of concern try copy/pasting just the animations you need as you will likely only use a sub-set of them. 
 * [Font Awesome](https://fontawesome.com/icons?d=gallery) : Most commonly used svg/css Icon library. 
