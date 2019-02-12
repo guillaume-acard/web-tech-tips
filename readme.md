@@ -121,7 +121,7 @@ If we have the following HTML / CSS:
 </div>
 ```
 
-_Bottom menu_ will be displayed at the bottom of the browser page. To have it relative to the parent element, simply add `position: relative` to `.view` css class, now its going to be placed _40px_ away from the bottom of your `view` div. I mention this case as its a common pitfall when trying to propely place elements in the page. Understanding that the parent element influence how properties of the sub-elements are calculated is important. 
+_Bottom menu_ will be displayed at the bottom of the browser page. To have it relative to the parent element, simply add `position: relative` to `.view` css class, now its going to be placed _40px_ away from the bottom of your `view` div. I mention this case as its a common pitfall when trying to properly place elements in the page. Understanding how parent elements can influence calculated properties of sub-elements is important. 
 
 ## Advanced CSS
 
@@ -155,7 +155,7 @@ If you are doing _RectJS_ development you should install [ES7 React/Redux/GraphQ
 Here a few of the snippets I use: 
 
 ### NodeJS
-```json
+```javascript
 // Quick Require typing
 "Require" : {
     "prefix": "rr",
@@ -202,10 +202,20 @@ Here a few of the snippets I use:
 ```
 
 ### ReactJS
-```json
+```javascript
 "Import Linked CSS": {
     "prefix": "css",
     "body": "import \"./$TM_FILENAME_BASE.css\""
+},
+// Redux related
+"Reducer Action Handler - Standard": {
+    "prefix": "actype",
+    "body": [
+        "if(action.type === $1){",
+        "\treturn { ...state, ${0}: action.payload };",
+        "}"
+    ],
+    "description": "Create if statement for action.type"
 }
 ```
 # Usefull Tools & sites
@@ -296,7 +306,7 @@ import { TextField } from 'office-ui-fabric-react/lib/TextField';
 ```
 instead of:
 ```javascript
-import { TextField } from 'office-ui-fabric-react`;
+import { TextField } from 'office-ui-fabric-react';
 ```
 Yes, it will create heavier import statements and are more clunky to manage. Its the price to pay for a more optimized build. 
 
