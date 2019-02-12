@@ -80,8 +80,9 @@ If you expect your page to be printed its important to check how its actually go
 
 ## Random
 
-A few power user commands you shoudl know: 
-* `Ctrl-shift-P` Open the Command Menu
+A few power user commands you should know: 
+* `Ctrl-P` : Quickly find a source file. 
+* `Ctrl-shift-P` : Open the Command Menu
 
 # CSS Tips
 
@@ -156,10 +157,16 @@ Here a few of the snippets I use:
     "body": "import \"./$TM_FILENAME_BASE.css\""
 }
 ```
-# Usefull Tools 
+# Usefull Tools & sites
 
+## Tools
 * [React Developer Tools](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi?hl=en) : Enhanced Debugging features of React Apps in Chrome's DevTools. A must have for React development. 
 * [PostMan](https://www.getpostman.com/) : REST API client. Great to share and document your web APIs.
+
+## Sites
+* [Codepen](https://codepen.io/) : Need a piece of code for component? for a css trick? Chances are someone already proposed a something on codepen for you to copy/paste! A usefull site to have in your toolbox. 
+* [ES Compatibility Table](http://kangax.github.io/compat-table/) : If you want to know what feature is supported by what browser or JS engine, this site can come in handy!
+* [JSON Generator](https://next.json-generator.com/) : Need to generate some JSON test data for your website? Try this tool, it allows to generate large amounts of very customized data entries. 
 
 # Frameworks & Libraries
 There are __PLENTY__ of _npm_ libraries out there, so its hard to keep up and know what to use. Just type anything + `npm` in _Google_ and see what happens, its likely you wil find several matching libraries. So how to choose? A good way when comparing several libs is using [www.npmtrends.com](https://www.npmtrends.com/). Add the names of a couple of libraries and see whats trending. 
@@ -175,15 +182,6 @@ Here are a couple of selected commonly used libraries you should know about:
 * [Lodash](https://lodash.com/) : Usefull helper functions library, fills the gap for many small missing functions in JS. 
     * ~~[Underscore](https://underscorejs.org/)~~ : This library used to be the favored one as a utility lib (and is still very used) but nowdays _Lodash_ has become the default as more "modern" (Lodash was inspired by Underscore). See [lodash-vs-underscore](https://www.npmtrends.com/lodash-vs-underscore)
 * [Winstom](https://github.com/winstonjs/winston) : A simple Logging library (for NodeJS) 
-
-## React Based libs
-* React UI Components Libraries:
-    * [Fabric (Office UI)](https://developer.microsoft.com/en-us/fabric)
-    * [Ant design](https://ant.design/)
-    * [Material Design (Google)](https://material-ui.com/)
-* Charting libs
-    * [React-Vis](https://uber.github.io/react-vis/)
-
 ## CSS libs
 * [animate.css](https://daneden.github.io/animate.css/) : Adds animations to your elements easily. A bit heavy (56k), so if performance is of concern try copy/pasting just the animations you need as you will likely only use a sub-set of them. 
 * [Font Awesome](https://fontawesome.com/icons?d=gallery) : Most commonly used svg/css Icon library. 
@@ -201,3 +199,13 @@ So the common question is: _React_, _Angular_ or _Vue_? Well the awnser for to t
 Why? Its of course a question of taste but if you want to leverage the most a large community, bet on _React_. A simple way to look at it is: [React vs Angular vs Vue](https://www.npmtrends.com/react-vs-@angular/core-vs-vue), still not conviced? Check: [2018.stateofjs.com/front-end-frameworks](https://2018.stateofjs.com/front-end-frameworks/overview/), _Angular_ has a large portion of `Used it, would not use it again` and thats not a good sign...
 
 To create a new _React App_, nothing better than the [Create-React-App](https://github.com/facebook/create-react-app) tool. Doing all the plumbing required to build your app with npm, webpack, babel, grunt, gulp, hot-reload, etc... was a real pain and this was part of the reason of the _"JS fatigue"_ that existed during the years from to 2015-2017.
+
+## React Based libs
+* React UI Components Libraries:
+    * [Fabric (Office UI)](https://developer.microsoft.com/en-us/fabric)
+    * [Ant design](https://ant.design/)
+    * [Material Design (Google)](https://material-ui.com/)
+* Charting libs
+    * [React-Vis](https://uber.github.io/react-vis/)
+* Special Components:
+    * [Draft.js](https://draftjs.org/) : Powerful WYSISWYG and Rich-text editror component. 
