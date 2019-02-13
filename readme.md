@@ -1,13 +1,13 @@
 # Web Development Tips & Tricks
 
-This is a compilation (in no specific order), of tips, tricks, tools and other things found over time that can help be better at web developement.
-Web evolves fast, too fast maybe... so some things might already be outdated by the time you read it! Feel free to add your own to the list!
+This is a compilation (in no specific order), of tips, tricks, tools and other things found over time that can help when doing web development.
+Web evolves fast, too fast some may say... so some things might already be outdated by the time you read it! Feel free to propose/add your own to the list!
 
 Enjoy!
 
 # Learn JavaScript
 
-This one might sound obvious but my feeling of why many people hate JavaScript is because they don't actually do the effort of learning the language in depth.
+This one might sound obvious but my feeling of why many people hate JavaScript in the first place is because they don't actually do the effort of learning the language in depth.
 
 `Hey, I know Java and there is the word "Java" in "JavaScript", so it must be the same right?`
 
@@ -101,7 +101,7 @@ Css is easy and hard at the same time... its not always easy to known what does 
 
 ![live Css edit](/know-your-browser/live-css-edit.PNG)
 
-Try adding display and cycling through the different values, best way to visually learn what they do :)
+Try adding the `display` proprty and cycling through the different values, best way to visually & learn what they do :)
 
 ## Some basics to know
 
@@ -141,10 +141,13 @@ See [Using CSS variables](https://developer.mozilla.org/en-US/docs/Web/CSS/Using
 
 # Your IDE setup
 
-The current most popular web development IDE [VSCode](https://code.visualstudio.com/) and its the clear winner in my opinion: Its functional, fast, highly customizable and in very active development. Previous to _VSCode_ you had [Sublime Text](https://www.sublimetext.com/) (A brilliantly done light-weight text editor originally written by just one guy!) and then [Atom.io](https://atom.io/), but both are loosing the IDE battle in favor of _VSCode_. There is of course also [WebStorm](https://www.jetbrains.com/webstorm/) but its a much more heavy IDE and requries a licence making it a less popular choice. 
+The current most popular web development IDE is [VisualStudioCode](https://code.visualstudio.com/) (or _VSCode_) and its the clear winner in my opinion: Its functional, fast, highly customizable and in very active development. Previous to _VSCode_ you had [Sublime Text](https://www.sublimetext.com/) (A brilliantly done light-weight text editor originally written by just one guy!) and then [Atom.io](https://atom.io/), but both are loosing the IDE battle in favor of _VSCode_. There is of course also [WebStorm](https://www.jetbrains.com/webstorm/) but its a much more heavy IDE and requries a licence making it a less popular choice. 
 
 Here are some subjective tips on how to have a better _VSCode_ setup:
-* Theme (very subjective): [Monokai](https://marketplace.visualstudio.com/items?itemName=DataByne.theme-monokai-hc)
+
+## Display
+* Color Theme (very subjective): [Monokai](https://marketplace.visualstudio.com/items?itemName=DataByne.theme-monokai-hc)
+* [TODO Highlight](https://marketplace.visualstudio.com/items?itemName=wayou.vscode-todo-highlight) : This extension allows to provide different highlight colors for lines matching a specific pattern. Good to highlight things like #todo or enphesize special comment sections. 
 
 ## Customize your Snippets 
 
