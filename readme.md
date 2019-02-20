@@ -149,13 +149,40 @@ Here are some subjective tips on how to have a better _VSCode_ setup:
 * Color Theme (very subjective): [Monokai](https://marketplace.visualstudio.com/items?itemName=DataByne.theme-monokai-hc)
 * [TODO Highlight](https://marketplace.visualstudio.com/items?itemName=wayou.vscode-todo-highlight) : This extension allows to provide different highlight colors for lines matching a specific pattern. Good to highlight things like #todo or enphesize special comment sections. 
 
+## Check your JS code with TypeScript
+
+For people coming from the _Java_ world or when workign on large projects, _JS_ can seems weak because fo its lack of type-checking capabilities.  This is where _TypeScript_ comes into play but switching to this language can be costly and represent a unecessary overhead of configuration/transpiling/restrictions you might not actually need (most of the cases imho). But fear not! You can use the power of _TypeScript_ to check you _JS_ code! 
+
+To have the very powerful _TypeScript_ engine analyze and perform some level of Type checking on your _JS_ code simply add a `jsconfig.json` file at the root of your projects with the following content:
+
+```json
+{
+    "compilerOptions": {
+        "jsx": "react", // If your in a React project
+        "target": "es2018", // Or whatever is your ES version target
+        "checkJs": true, // This is what activates the TypeScript engine
+        "module": "commonjs",
+        "allowSyntheticDefaultImports": true
+    },
+    "exclude": [
+        "node_modules",
+        "build"
+    ]
+}
+```
+_VSCode_ will automatically pick this up and perform all the magic for you! It might report wrong or unwanted errors, there are ways to remove them but a having a few wrongly reported issues compared to the benefits is worth it!
+
+You cab help the _TypeScript_ engine know types in unclear situations by using [JSDoc - @Typedef](http://usejsdoc.org/tags-typedef.html)
+
+You can also activate this by default but it provides less flexibility for project specifics. 
+
 ## Customize your Snippets 
 
 Snippets are a great way to speed up your development! Use them and create your owns! 
 
 If you are doing _RectJS_ development you should install [ES7 React/Redux/GraphQL/React-Native snippets](https://marketplace.visualstudio.com/items?itemName=dsznajder.es7-react-js-snippets#overview)
 
-Here a few of the snippets I use: 
+Here a few ideas of snippets I use: 
 
 ### NodeJS
 ```javascript
@@ -170,11 +197,6 @@ Here a few of the snippets I use:
     "body": "const ${1:name}$2 = require('./${1:name}');$0",
     "description": "Require local file"
 },
-"Require Local file property" : {
-    "prefix": "rrfp",
-    "body": "const { $2 } = require('./$1');$0",
-    "description": "Require local file"
-},
 // Common libs
 "Import MomentJS": { 
     "prefix": "mm",
@@ -187,16 +209,6 @@ Here a few of the snippets I use:
     "description": "Import Lodash"
 },
 // Common syntax helpers
-"Lambda function - one line" : {
-    "prefix": "ll",
-    "body": "($1) => $0",
-    "description": "Base template for lambda function"
-},
-"Lambda function" : {
-    "prefix": "lll",
-    "body": "($1) => {\n\t$0\n}",
-    "description": "Base template for lambda function"
-},
 "REST API - Request/Response method": {
     "prefix": "rr",
     "body": "(req, res) => {\n\t$0\n}",
