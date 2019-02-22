@@ -89,6 +89,12 @@ If you expect your page to be printed its important to check how its actually go
 
 ![Print Emulation](/know-your-browser/print-emulation.PNG)
 
+### Simulate Elements state
+
+When working with _CSS_ you will sometimes be customizing how a element is displayed when its, _focused_ or in _hover_ state. Its not easy to see the actual used _css_ details AND play around with the _DevTools_ at the same time. A easy way to simulate this is using the _Force element state_ feature: 
+
+![Element State Simulation](/know-your-browser/css-event-simulation.PNG)
+
 ## Random
 
 A few power user commands you should know: 
