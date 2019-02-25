@@ -14,7 +14,7 @@ log( simpson[2] );
 simpson.index = 2;
 log( simpson[simpson.index] );
  
-// Be carfull with remove
+// Be careful with remove
 delete simpson[1];
 log( simpson );
  
