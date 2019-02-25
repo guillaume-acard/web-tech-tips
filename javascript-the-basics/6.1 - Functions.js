@@ -14,7 +14,7 @@ var helloMe = function helloYou(){ log("Hello me!") };
 helloMe();
 // helloYou(); => throws exeption
 
-// Sell Calling methods
+// Self Calling methods
 (function() { 
     log("Leave me alone!")
 })();
