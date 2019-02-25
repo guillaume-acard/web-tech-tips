@@ -13,7 +13,7 @@ This one might sound obvious but my feeling of why many people hate JavaScript i
 
  This could not be more wrong and the name _JavaScript_ (who is a trademark of Oracle, reason why its official name is actually _ECMAScript_ or _ES_) was probably one of the biggest source of confusion around the language. Its a mix of syntax pieces of C/Java + Scheme + Self, so yes, some syntax elements look the same but under the hood its a very different approach. 
 
-So to become a good Web Developer, you need to actually **learn and study** JavaScipt, hum... I mean ECMAScript!
+So to become a good Web Developer, you need to actually **learn and study** JavaScript, hum... I mean ECMAScript!
 Understand how the _this_ keyword works, what a _Prototype_ is, what really is a _function_ and where are the many traps in the language is a must have.
 
 Here is a list of *.js* files that aims to cover some of the basics and traps of the language:
