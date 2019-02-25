@@ -267,6 +267,7 @@ Here are a couple of selected commonly used libraries you should know about:
 * [axios](https://github.com/axios/axios) : A promised based HTTP client for the Browser and NodeJS. Its easy to use but has one little problem... its support for _proxy_ so might want to use the fix:
     * see [/axios/axios/issues/925](https://github.com/axios/axios/issues/925)
     * Working for proxy: [axios-https-proxy-fix](https://www.npmjs.com/package/axios-https-proxy-fix)
+
 ## CSS libs
 * [animate.css](https://daneden.github.io/animate.css/) : Adds animations to your elements easily. A bit heavy (56k), so if performance is of concern try copy/pasting just the animations you need as you will likely only use a sub-set of them. 
 * [Font Awesome](https://fontawesome.com/icons?d=gallery) : Most commonly used svg/css Icon library. 
