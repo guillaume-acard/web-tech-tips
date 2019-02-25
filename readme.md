@@ -107,7 +107,7 @@ Css is easy and hard at the same time... its not always easy to known what does 
 
 ![live Css edit](/know-your-browser/live-css-edit.PNG)
 
-Try adding the `display` proprty and cycling through the different values, best way to visually & learn what they do :)
+Try adding the `display` property and cycling through the different values, best way to visually & learn what they do :)
 
 ## Some basics to know
 
