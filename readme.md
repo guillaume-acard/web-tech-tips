@@ -147,7 +147,7 @@ See [Using CSS variables](https://developer.mozilla.org/en-US/docs/Web/CSS/Using
 
 # Your IDE setup
 
-The current most popular web development IDE is [VisualStudioCode](https://code.visualstudio.com/) (or _VSCode_) and its the clear winner in my opinion: Its functional, fast, highly customizable and in very active development. Previous to _VSCode_ you had [Sublime Text](https://www.sublimetext.com/) (A brilliantly done light-weight text editor originally written by just one guy!) and then [Atom.io](https://atom.io/), but both are loosing the IDE battle in favor of _VSCode_. There is of course also [WebStorm](https://www.jetbrains.com/webstorm/) but its a much more heavy IDE and requries a licence making it a less popular choice. 
+The current most popular web development IDE is [VisualStudioCode](https://code.visualstudio.com/) (or _VSCode_) and its the clear winner in my opinion: Its functional, fast, highly customizable and in very active development. Previous to _VSCode_ you had [Sublime Text](https://www.sublimetext.com/) (A brilliantly done light-weight text editor originally written by just one guy!) and then [Atom.io](https://atom.io/), but both are loosing the IDE battle in favor of _VSCode_. There is of course also [WebStorm](https://www.jetbrains.com/webstorm/) but its a much more heavy IDE and requires a licence making it a less popular choice. 
 
 Here are some subjective tips on how to have a better _VSCode_ setup:
 
@@ -157,7 +157,7 @@ Here are some subjective tips on how to have a better _VSCode_ setup:
 
 ## Check your JS code with TypeScript
 
-For people coming from the _Java_ world or when workign on large projects, _JS_ can seems weak because fo its lack of type-checking capabilities.  This is where _TypeScript_ comes into play but switching to this language can be costly and represent a unecessary overhead of configuration/transpiling/restrictions you might not actually need (most of the cases imho). But fear not! You can use the power of _TypeScript_ to check you _JS_ code! 
+For people coming from the _Java_ world or when working on large projects, _JS_ can seem weak because of its lack of type-checking capabilities.  This is where _TypeScript_ comes into play but switching to this language can be costly and represents an unecessary overhead of configuration/transpiling/restrictions you might not actually need (most of the cases imho). But fear not! You can use the power of _TypeScript_ to check you _JS_ code! 
 
 To have the very powerful _TypeScript_ engine analyze and perform some level of Type checking on your _JS_ code simply add a `jsconfig.json` file at the root of your projects with the following content:
 
@@ -178,7 +178,7 @@ To have the very powerful _TypeScript_ engine analyze and perform some level of 
 ```
 _VSCode_ will automatically pick this up and perform all the magic for you! It might report wrong or unwanted errors, there are ways to remove them but a having a few wrongly reported issues compared to the benefits is worth it!
 
-You cab help the _TypeScript_ engine know types in unclear situations by using [JSDoc - @Typedef](http://usejsdoc.org/tags-typedef.html)
+You can help the _TypeScript_ engine know types in unclear situations by using [JSDoc - @Typedef](http://usejsdoc.org/tags-typedef.html)
 
 You can also activate this by default but it provides less flexibility for project specifics. 
 
@@ -186,7 +186,7 @@ You can also activate this by default but it provides less flexibility for proje
 
 Snippets are a great way to speed up your development! Use them and create your owns! 
 
-If you are doing _RectJS_ development you should install [ES7 React/Redux/GraphQL/React-Native snippets](https://marketplace.visualstudio.com/items?itemName=dsznajder.es7-react-js-snippets#overview)
+If you are doing _ReactJS_ development you should install [ES7 React/Redux/GraphQL/React-Native snippets](https://marketplace.visualstudio.com/items?itemName=dsznajder.es7-react-js-snippets#overview)
 
 Here a few ideas of snippets I use: 
 
@@ -239,7 +239,7 @@ Here a few ideas of snippets I use:
     "description": "Create if statement for action.type"
 }
 ```
-# Usefull Tools & sites
+# Useful Tools & sites
 
 ## Tools
 * [React Developer Tools](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi?hl=en) : Enhanced Debugging features of React Apps in Chrome's DevTools. A must have for React development. 
@@ -251,11 +251,11 @@ Here a few ideas of snippets I use:
 * [JSON Generator](https://next.json-generator.com/) : Need to generate some JSON test data for your website? Try this tool, it allows to generate large amounts of very customized data entries. 
 
 # Frameworks & Libraries
-There are __PLENTY__ of _npm_ libraries out there, so its hard to keep up and know what to use. Just type anything + `npm` in _Google_ and see what happens, its likely you wil find several matching libraries. So how to choose? A good way when comparing several libs is using [www.npmtrends.com](https://www.npmtrends.com/). Add the names of a couple of libraries and see whats trending. 
+There are __PLENTY__ of _npm_ libraries out there, so its hard to keep up and know what to use. Just type anything + `npm` in _Google_ and see what happens, it's likely you wil find several matching libraries. So how to choose? A good way when comparing several libs is using [www.npmtrends.com](https://www.npmtrends.com/). Add the names of a couple of libraries and see what's trending. 
 
 Another good place to look at is: [bestofjs.org](https://bestofjs.org/), its a currated list of the most popular projects. 
 
-If you want to lookback on the past year to see whats trending, this site is also a great place: [2018.stateofjs.com](https://2018.stateofjs.com/introduction/)
+If you want to lookback on the past year to see what's trending, this site is also a great place: [2018.stateofjs.com](https://2018.stateofjs.com/introduction/)
 
 Here are a couple of selected commonly used libraries you should know about: 
 
@@ -282,7 +282,7 @@ Here are a couple of selected commonly used libraries you should know about:
 
 So the common question is: _React_, _Angular_ or _Vue_? Well the awnser for to this one is simple: __React__!!!
 
-Why? Its of course a question of taste but if you want to leverage the most a large community, bet on _React_. A simple way to look at it is: [React vs Angular vs Vue](https://www.npmtrends.com/react-vs-@angular/core-vs-vue), still not conviced? Check: [2018.stateofjs.com/front-end-frameworks](https://2018.stateofjs.com/front-end-frameworks/overview/), _Angular_ has a large portion of `Used it, would not use it again` and thats not a good sign...
+Why? It's of course a question of taste but if you want to leverage the most a large community, bet on _React_. A simple way to look at it is: [React vs Angular vs Vue](https://www.npmtrends.com/react-vs-@angular/core-vs-vue), still not conviced? Check: [2018.stateofjs.com/front-end-frameworks](https://2018.stateofjs.com/front-end-frameworks/overview/), _Angular_ has a large portion of `Used it, would not use it again` and that's not a good sign...
 
 To create a new _React App_, nothing better than the [Create-React-App](https://github.com/facebook/create-react-app) tool. Doing all the plumbing required to build your app with npm, webpack, babel, grunt, gulp, hot-reload, etc... was a real pain and this was part of the reason of the _"JS fatigue"_ that existed during the years from to 2015-2017.
 
