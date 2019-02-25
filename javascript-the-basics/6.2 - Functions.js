@@ -8,7 +8,7 @@ show(1); // less arguments? Still don't care
 //: Special argument: arguments
 const sum = function(first) {
 	let total = first;
-	for(let i = 1; i < arguments.length; i += 1){ // Argument is alway sprovided and gives the list of all arguments of the method.
+	for(let i = 1; i < arguments.length; i += 1){ // Argument is always provided and gives the list of all arguments of the method.
 		total += arguments[i];
 	}
 	return total;
