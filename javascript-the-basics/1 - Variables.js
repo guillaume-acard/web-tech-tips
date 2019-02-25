@@ -43,4 +43,4 @@ if(true) {
 log( scopeES6 );
 
 const Answer_to_the_Ultimate_Question_of_Life = 42;
-Answer_to_the_Ultimate_Question_of_Life = "beer?"; // Throws a exception
+Answer_to_the_Ultimate_Question_of_Life = "beer?"; // Throws an exception
