@@ -285,6 +285,8 @@ So the common question is: _React_, _Angular_ or _Vue_? Well the awnser for to t
 
 Why? It's of course a question of taste but if you want to leverage the most a large community, bet on _React_. A simple way to look at it is: [React vs Angular vs Vue](https://www.npmtrends.com/react-vs-@angular/core-vs-vue), still not conviced? Check: [2018.stateofjs.com/front-end-frameworks](https://2018.stateofjs.com/front-end-frameworks/overview/), _Angular_ has a large portion of `Used it, would not use it again` and that's not a good sign...
 
+StackOverflow Survey 2019: `This year, we asked about frameworks for the web separately from other frameworks and libraries. jQuery is the most broadly used of these web frameworks, and this year more developers say they use React.js than Angular, a switch from last year.` 
+
 To create a new _React App_, nothing better than the [Create-React-App](https://github.com/facebook/create-react-app) tool. Doing all the plumbing required to build your app with npm, webpack, babel, grunt, gulp, hot-reload, etc... was a real pain and this was part of the reason of the _"JS fatigue"_ that existed during the years from to 2015-2017.
 
 ## React Based libs
