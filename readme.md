@@ -149,9 +149,14 @@ See [Using CSS variables](https://developer.mozilla.org/en-US/docs/Web/CSS/Using
 
 The current most popular web development IDE is [VisualStudioCode](https://code.visualstudio.com/) (or _VSCode_) and its the clear winner in my opinion: Its functional, fast, highly customizable and in very active development. Previous to _VSCode_ you had [Sublime Text](https://www.sublimetext.com/) (A brilliantly done light-weight text editor originally written by just one guy!) and then [Atom.io](https://atom.io/), but both are loosing the IDE battle in favor of _VSCode_. There is of course also [WebStorm](https://www.jetbrains.com/webstorm/) but its a much more heavy IDE and requires a licence making it a less popular choice. 
 
-Here are some subjective tips on how to have a better _VSCode_ setup:
+Here are some subjective tips on how to have a better _VSCode_ setup. More can be found here: [vscodecandothat.com](https://vscodecandothat.com/)
 
 ## Display
+* Font Ligatures (allows to have this → instead of this => ) : Download the font [FiraCode](https://github.com/tonsky/FiraCode) and use it by changing your _settings_:
+```
+"editor.fontFamily": "Fira Code",
+"editor.fontLigatures": true 
+```
 * Color Theme (very subjective): [Monokai](https://marketplace.visualstudio.com/items?itemName=DataByne.theme-monokai-hc)
 * [TODO Highlight](https://marketplace.visualstudio.com/items?itemName=wayou.vscode-todo-highlight) : This extension allows to provide different highlight colors for lines matching a specific pattern. Good to highlight things like #todo or enphesize special comment sections. 
 
