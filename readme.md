@@ -3,7 +3,7 @@
 This is a compilation (in no specific order), of tips, tricks, tools and other things found over time that can help when doing web development.
 Web evolves fast, too fast some may say... so some things might already be outdated by the time you read it! Feel free to propose/add your own to the list!
 
-Enjoy!
+> Enjoy!
 
 # Learn JavaScript
 
@@ -39,6 +39,35 @@ Here is a list of *.js* files that aims to cover some of the basics and traps of
     1. [Export-ES6](/javascript-the-basics/11.3%20-%20Import-Export%20ES6.js)
     1. [Import-ES6](/javascript-the-basics/11.4%20-%20Import-Export%20ES6.js)
 
+## Lesser Known JS features
+
+JS is a very rich (too?) language with lots of syntaxe quirks. Some are lesser known and provide a deeper understanding of the language. Some can even be usefull on a daily basis!
+
+* [void operator](./lesser-known-features/syntax-void.js)
+* [coma operator](./lesser-known-features/syntax-coma-operator.js)
+* [in operator](./lesser-known-features/syntax-in-operator.js)
+* [string literals](./lesser-known-features/syntax-string-literals.js)
+* [Symbol primitive](./lesser-known-features/syntax-symbol.js)
+* [Not really useful but fun to know](./lesser-known-features/syntax-lesser-known.js)
+    * Hashbang comments: [Details](https://github.com/tc39/proposal-hashbang)
+    * No need for parenthesis with new 
+    * debugger
+    * "with" keyword
+    * Reserved Keywords
+* [Iterators & Generators](./lesser-known-features/syntax-iterators-and-generator-function.js)
+* [Hacks and weird stuff](./lesser-known-features/syntax-weird-and-hacks.js)
+    * Using ~
+    * Accidental global
+* [Function constructor](./lesser-known-features/features-function-constructor.js)
+
+## Usefull lesser known methods
+* [console methods](./lesser-known-features/features-console.js)
+
+## Coming Soon!
+> run using: _npx babel-node fileName.js_
+* [Stage-4](./lesser-known-features/coming-soon-stage4.js)
+* [Stage-3](./lesser-known-features/coming-soon-stage3.js)
+
 # Know your Browser 
 
 Where does all of this web stuff ends up living in? Mostly in your **Browser**.
@@ -57,6 +86,13 @@ Here are a few lesser known features of the console:
 
 * Get the value of the last operation with `$_`
 * Reference the currently selected DOM element with `$0`
+
+## Text Editor
+
+Did you know you can make the page fully editable? Like if it was a text editor? 
+Simply open the console and enter this _(Have fun!)_: 
+
+`document.body.contentEditable=true`
 
 ## UI Testing
 
