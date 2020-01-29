@@ -65,6 +65,7 @@ JS is a very rich (too?) language with lots of syntaxe quirks. Some are lesser k
 
 ## Coming Soon!
 > run using: _npx babel-node fileName.js_
+
 * [Stage-4](./lesser-known-features/coming-soon-stage4.js)
 * [Stage-3](./lesser-known-features/coming-soon-stage3.js)
 
