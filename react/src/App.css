@@ -1,0 +1,77 @@
+/* latin */
+@font-face {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Raleway'), local('Raleway-Regular'), url(https://fonts.gstatic.com/s/raleway/v12/1Ptug8zYS_SKggPNyC0ITw.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+body{
+  margin: 0;
+  padding: 0;
+  font-family: "Raleway", Arial, sans-serif;
+  color: #444;
+  font-size: 13pt;
+  line-height: 1.65em;
+}
+
+header {
+  text-align: center;
+  background: #eee;
+  padding: 10px;
+}
+
+nav a{
+  margin: 5px;
+  background: #0078d4;
+  color: white;
+  padding: 0px 16px 0px 16px;
+  border-radius: 2px;
+  text-decoration: none;
+  border: 1px solid rgb(138, 136, 134);
+  text-align: center;
+  cursor: pointer;
+  display: inline-block;
+  height: 28px;
+  box-sizing: border-box;
+  font-size: 14px;
+  font-weight: normal;
+}
+
+main{
+  padding-left: 20px;
+}
+
+h1, h2{
+  font-weight: lighter;
+}
+
+.user{
+  border: 1px solid darkblue;
+  border-radius: 4px;
+  padding: 2px;
+  margin-bottom: 2px;
+}
+
+input{
+  padding: 8px 8px 8px 8px;
+  border: 1px solid #605e5c;
+  border-radius: 2px;
+  margin-bottom: 2px;
+}
+
+section{
+  border: 1px solid rgb(138, 136, 134);
+  border-radius: 10px;
+  padding: 5px;
+  margin-top: 5px;
+}
+
+button{
+  padding: 4px;
+}
+
+.comma-list-item:not(:last-child)::after{
+  content: ", ";
+}

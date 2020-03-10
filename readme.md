@@ -63,8 +63,9 @@ JS is a very rich (too?) language with lots of syntaxe quirks. Some are lesser k
 ## Usefull lesser known methods
 * [console methods](./lesser-known-features/features-console.js)
 
-## Coming Soon!
+## Features Coming Soon!
 > run using: _npx babel-node fileName.js_
+
 * [Stage-4](./lesser-known-features/coming-soon-stage4.js)
 * [Stage-3](./lesser-known-features/coming-soon-stage3.js)
 
@@ -101,6 +102,20 @@ The _DevTools_ provide many handy features to help understand and test your inte
 ### Paint Flashing
 To easily visualize whats being rendered activate the __Paint Flashing__ feature.
 ![Paint Flashing](/know-your-browser/paint-flashing.PNG)
+
+### Performance measurement  
+You can add performance markers in your code that are then visualy displayed when doing a performance recording.
+
+[View code example](./react/performances/LoadingPerformance.tsx)
+
+![Performance measurement](./know-your-browser/performance-measuring.PNG)
+
+### React 
+If you are using React, you absolutly need the [React Developer Tools](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi?hl=en) extension. 
+
+Once installed you will be able to visualize when a component renders: _Options > "Highlight updates when components render."_
+
+![Component Render](/know-your-browser/react-component-rendering.PNG)
 
 ### Loading Testing
 Every application usually has some sort of data loading handling when fetching data to the server. Testing if the visual layout is correct can be difficult when in a local environement as there is no network latency. 
@@ -180,6 +195,18 @@ See [Using CSS variables](https://developer.mozilla.org/en-US/docs/Web/CSS/Using
     background: val(--bg-color);
 }
 ```
+# ReactJS
+## Fundementals
+* Why do we need `import React from "react"` when we dont actualy use it in the code?
+* [The basics - JSX](./react/basics/TheBasics.jsx)
+* [Array Results](./react/basics/ArrayResults.jsx)
+
+## React components
+* [Component Lifecycle calls vs Hooks](./react/basics/LifeCycles.jsx)
+    * [Summary](./react/basics/LifeCycleAsFunction.js)
+* [Error Handling](./react/basics/ErrorBoundary.jsx)
+* [Why a good array key matters](./react/basics/GoodKeys.jsx)
+* [Higher Order component](./react/patterns/HigherOrderComponents.jsx)
 
 # Your IDE setup
 
