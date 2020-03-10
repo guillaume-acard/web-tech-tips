@@ -196,17 +196,21 @@ See [Using CSS variables](https://developer.mozilla.org/en-US/docs/Web/CSS/Using
 }
 ```
 # ReactJS
+A dedicated playground project with examples is available [here](./react/package.json)
+
+To use, simply run `npm install` then `npm run start`.
+
 ## Fundementals
 * Why do we need `import React from "react"` when we dont actualy use it in the code?
-* [The basics - JSX](./react/basics/TheBasics.jsx)
-* [Array Results](./react/basics/ArrayResults.jsx)
+* [The basics - JSX](./react/src/basics/TheBasics.jsx)
+* [Array Results](./react/src/basics/ArrayResults.jsx)
 
 ## React components
-* [Component Lifecycle calls vs Hooks](./react/basics/LifeCycles.jsx)
-    * [Summary](./react/basics/LifeCycleAsFunction.js)
-* [Error Handling](./react/basics/ErrorBoundary.jsx)
-* [Why a good array key matters](./react/basics/GoodKeys.jsx)
-* [Higher Order component](./react/patterns/HigherOrderComponents.jsx)
+* [Component Lifecycle calls vs Hooks](./react/src/basics/LifeCycles.jsx)
+    * [Summary](./react/src/basics/LifeCycleAsFunction.js)
+* [Error Handling](./react/src/basics/ErrorBoundary.jsx)
+* [Why a good array key matters](./react/src/basics/GoodKeys.jsx)
+* [Higher Order component](./react/src/patterns/HigherOrderComponents.jsx)
 
 # Your IDE setup
 
