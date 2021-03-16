@@ -32,3 +32,10 @@ global.state = " LOL ";
 otherState();
 otherState = otherState.bind(smiley);
 otherState();
+
+// Did you now?
+const and = (first, ...more) => {
+	return ""
+}
+
+const test = [1, 2, and `test`];

@@ -1,6 +1,6 @@
 const { log } = console;
 
-// #: These aren't the arrays you're looking for...
+//#: These aren't the arrays you're looking for...
 let simpson = ["Marge", "Bart", "Lisa"];
 log( typeof(simpson) );
 
