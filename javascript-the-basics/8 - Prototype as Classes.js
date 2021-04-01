@@ -6,6 +6,7 @@ const { log } = console;
 let Shape = function (x, y) {
     this.x = x;
     this.y = y;
+    log(this);
 };
 Shape.prototype.move = function (x, y) {
     this.x = x;
@@ -18,7 +19,7 @@ log(a);
 
 const b = Shape(3, 4); // convention is first letter UpperCase for functionthatneeds to be used with new
 log(b);
-// b.move(5, 10); // wont work
+// b.move(5, 10); // wont work: but why?
 
 //: What new really does
 function new_(func, ...arguments){

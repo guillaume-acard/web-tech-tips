@@ -18,6 +18,9 @@ helloMe();
 (function() { 
     log("Leave me alone!")
 })();
+void function() {
+    log("All by myseeeeelf!")
+}();
 
 //: ES6 brought Lambda! Pfeeewwww...
 let helloES6 = () => log("hello");

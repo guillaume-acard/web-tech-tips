@@ -28,7 +28,7 @@ const user = {
 };
 
 log(user.first ?? "Kirk");
-log(user.last ?? "Tiger");
+log(user.last || "Tiger");
 
 //: Ternary 
 log(user.last ? user.last : user.first);

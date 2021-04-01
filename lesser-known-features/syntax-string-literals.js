@@ -55,4 +55,11 @@ Ignore sub # header`)
 // https://github.com/styled-components/styled-components
 // https://github.com/skolmer/es2015-i18n-tag
 
-// Coudl be used for FIX / ULMSG manipulation?
+// For proper english arrays
+const and = ([first, ...more]) => {
+	return first;
+}
+
+const test = [1, 2, and `test`];
+
+console.log(test)

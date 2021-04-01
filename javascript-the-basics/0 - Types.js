@@ -7,7 +7,7 @@ var float = 3.1419; // Implicit => Number(3.1419)
 log(typeof (int));
 log(typeof (float));
 log(Number.MAX_VALUE);
-log(0.1 + 0.2 === 0.3);
+log(0.1 + 0.2);
 log(1_000_000_000_000);
 //: Ok... not so true anymore... we know have BigInt. Usefull if you work at nasa or finance. 
 var pi = 31415926535897932384626433832795028841971693993751058209749445923078164n;
