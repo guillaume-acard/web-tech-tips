@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react";
 
 export default class ErrorBoundary extends React.Component {
     constructor(props) {
@@ -13,9 +13,9 @@ export default class ErrorBoundary extends React.Component {
     render() {
         if (this.state.error) {
             const { errorComponent } = this.props;
-            if(errorComponent){
+            if (errorComponent) {
                 const ErrorComponent = errorComponent;
-                return <ErrorComponent error={this.state.error} />
+                return <ErrorComponent error={this.state.error} />;
             }
             return <h1>Something went wrong: {this.state.error}</h1>;
         }
@@ -27,15 +27,18 @@ const SubComponent1 = () => <div>This is one is working.</div>;
 const SubComponent2 = () => <div>This is one is not working. {this.props.unknownFunction()}</div>;
 
 export const ErrorUsageExample = () => {
-    return <>
-        <ErrorBoundary>
-            <SubComponent1 />
-        </ErrorBoundary>
-        <ErrorBoundary>
-            <SubComponent2 />
-        </ErrorBoundary>
-        <ErrorBoundary errorComponent={ ({ error }) => <h1>PANIIIIIIC! {error}</h1>}>
-            <SubComponent2 />
-        </ErrorBoundary>
-    </>
-}
+    return (
+        <>
+            <h2>Class based</h2>
+            <ErrorBoundary>
+                <SubComponent1 />
+            </ErrorBoundary>
+            <ErrorBoundary>
+                <SubComponent2 />
+            </ErrorBoundary>
+            <ErrorBoundary errorComponent={({ error }) => <h1>PANIIIIIIC! {error}</h1>}>
+                <SubComponent2 />
+            </ErrorBoundary>
+        </>
+    );
+};
